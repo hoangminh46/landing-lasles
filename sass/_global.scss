@@ -1,0 +1,121 @@
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    font-size: 16px;
+    font-weight: 1;
+    font-family: $font;
+    color: $text-color;
+    font-weight: 400;
+    background: white;
+}
+
+.button{
+    display: inline-block;
+    padding: 13px 45px;
+    border-radius: 100rem;
+    font-family: $font;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: center;
+    white-space: nowrap;
+    &--primary{
+        font-weight: 700;
+        background: $primary-color;
+        color: white;
+    }
+    &--outline{
+        background-color: transparent;
+        color: $primary-color;
+        font-weight: 500;
+        border: 1px solid $primary-color;
+    }
+    &--rounded{
+        border-radius: 10px;
+        padding: 17px 65px;
+    }
+    &--shadow{
+        position: relative;
+        &:after{
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%,50%);
+            background-color: rgba(245, 56, 56, 0.35);
+            filter: blur(54px);
+            border-radius: inherit;
+            z-index: -1;
+        }
+    }
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: $heading-color;
+    font-weight: bold;
+}
+.heading{
+    font-weight: 500;
+    font-size: 35px;
+    line-height: calc(50 / 35);
+    margin-bottom: 20px;
+}
+.heading-small{
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 5px;
+    line-height: calc(30/18);
+}
+.text{
+    line-height: calc(30/16);
+
+}
+
+.text-medium{
+    font-weight: 500;
+}
+.text-small{
+    font-size: 14px;
+    line-height: calc(30/14);
+}
+
+.heading-width{
+    max-width: 555px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bg-after{
+    background-color: $gray-light-color;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+@media screen and (max-width: 767px) {
+    .button{
+        padding: 13px 26px !important;
+    }
+    .heading{
+        font-size: 30px;
+    }
+}
